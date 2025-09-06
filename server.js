@@ -13,7 +13,7 @@ const MAX_BUFFER_SIZE = 100;
 // ✅ Middleware: parse JSON and enable CORS for your frontend domain
 app.use(express.json());
 app.use(cors({
-  origin: 'https://gggg-2.pagedrop.io', // 🔧 REPLACE with your actual HTML domain (e.g. https://colonysim.page)
+  origin: 'https://gggg-2.pagedrop.io', // 🔧 Replace with your actual HTML domain
   credentials: true
 }));
 
@@ -41,18 +41,23 @@ app.post('/api/action', (req, res) => {
 // 🔍 GET /api/updates — returns recent actions for polling clients
 app.get('/api/updates', (req, res) => {
   const latest = actionBuffer[actionBuffer.length - 1];
-  res.json({ message: latest ? latest.action + ' by ' + latest.username : 'No recent actions' });
+  res.json({ message: latest ? `${latest.action} by ${latest.username}` : 'No recent actions' });
 });
 
-// 🧾 Optional: POST /api/register — stores player identity (can be expanded later)
+// 🧾 POST /api/register — stores player identity (can be expanded later)
 app.post('/api/register', (req, res) => {
   const player = req.body;
   console.log("Registered player:", JSON.stringify(player));
   res.json({ status: 'Registered' });
 });
 
+// ❤️ GET / — Health check route
+app.get('/', (req, res) => {
+  res.send('✅ Colonization server is live and listening');
+});
+
 // 🚀 Start server
 app.listen(PORT, () => {
   console.log(`Colonization server running on port ${PORT}`);
-
 });
+
