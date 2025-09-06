@@ -11,8 +11,9 @@
     "cors": "^2.8.5"
   },
   "author": "Deanna",
-  "license": "MIT",
+  "license": "Closed Source",
   "engines": {
     "node": ">=18.0.0"
   }
+
 }
