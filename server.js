@@ -13,7 +13,7 @@ const MAX_BUFFER_SIZE = 100;
 // ✅ Middleware: parse JSON and enable CORS for your frontend domain
 app.use(express.json());
 app.use(cors({
-  origin: 'https://gggg.pagedrop.io', // 🔧 REPLACE with your actual HTML domain (e.g. https://colonysim.page)
+  origin: 'https://gggg-2.pagedrop.io', // 🔧 REPLACE with your actual HTML domain (e.g. https://colonysim.page)
   credentials: true
 }));
 
@@ -54,4 +54,5 @@ app.post('/api/register', (req, res) => {
 // 🚀 Start server
 app.listen(PORT, () => {
   console.log(`Colonization server running on port ${PORT}`);
+
 });
