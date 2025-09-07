@@ -13,7 +13,7 @@ const MAX_BUFFER_SIZE = 100;
 // ✅ Middleware: parse JSON and enable CORS for your frontend domain
 app.use(express.json());
 app.use(cors({
-  origin: 'https://rapid-bay-vx30.pagedrop.io', // 🔧 Replace with your actual HTML domain
+  origin: 'https://timeless-otter-92h6.pagedrop.io', // 🔧 Replace with your actual HTML domain
   credentials: true
 }));
 
@@ -60,6 +60,7 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Colonization server running on port ${PORT}`);
 });
+
 
 
 
