@@ -13,7 +13,7 @@ const MAX_BUFFER_SIZE = 100;
 // ✅ Middleware: parse JSON and enable CORS for your frontend domain
 app.use(express.json());
 app.use(cors({
-  origin: 'https://coral-icekacang-4x58.pagedrop.io', // 🔧 Replace with your actual HTML domain
+  origin: 'https://nnnnnnnnnn.pagedrop.io', // 🔧 Replace with your actual HTML domain
   credentials: true
 }));
 
@@ -60,6 +60,7 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Colonization server running on port ${PORT}`);
 });
+
 
 
 
